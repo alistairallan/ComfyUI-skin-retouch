@@ -1,4 +1,4 @@
 modelscope
 opencv-python-headless
 addict
-datasets
+datasets==2.14.6
