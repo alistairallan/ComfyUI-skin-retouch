@@ -1,3 +1,4 @@
 modelscope
 opencv-python-headless
 addict
+datasets
