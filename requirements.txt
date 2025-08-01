@@ -1,5 +1,7 @@
 modelscope
 opencv-python-headless
 addict
-datasets==2.14.6
-pyarrow==14.0.2
+onnxruntime
+Pillow
+datasets
+pyarrow
