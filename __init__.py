@@ -33,9 +33,6 @@ from modelscope.models.cv.skin_retouching.utils import (
 )
 from modelscope.outputs import OutputKeys
 
-# RetinaFace detector — also pure PyTorch inside modelscope
-from modelscope.models.cv.face_detection.retinaface.retinaface_det import RetinaFaceDetection
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Helpers
