@@ -245,6 +245,9 @@ class SkinRetouchingNode:
 
         # ── 3. Whitening pass ─────────────────────────────────────────
         if enable_whitening and whitening_degree > 0 and skin_mask is not None:
+            # ONNX returns float32 but numpy may upcast; force float32
+            # before whiten_img sends it to MPS (no float64 support on Apple Silicon).
+            skin_mask = skin_mask.astype(np.float32)
             output_pred = whiten_img(
                 output_pred, skin_mask, whitening_degree,
                 flag_bigKernal=flag_bigKernal)
